@@ -5,4 +5,3 @@ function mostrar()
 {
 	alert("esto funciona de maravilla");
 }
-
