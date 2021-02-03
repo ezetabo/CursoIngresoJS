@@ -3,7 +3,7 @@ Debemos lograr tomar nombre y edad por ID y mostrarlos concatenados
 ej.: "Usted se llama José y tiene 66 años" 	*/
 
 //Ezequiel Taboada
-
+// 5
 function mostrar()
 {	
 let elNombre;
