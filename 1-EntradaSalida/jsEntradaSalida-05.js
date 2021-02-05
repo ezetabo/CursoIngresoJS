@@ -7,9 +7,9 @@ ej.: "Usted se llama José y tiene 66 años" 	*/
 function mostrar()
 {	
 let elNombre;
-elNombre = document.getElementById('txtIdNombre').value;
-
 let edad;
+
+elNombre = document.getElementById('txtIdNombre').value;
 edad = document.getElementById('txtIdEdad').value;
 
 	alert("Usted se llama " + elNombre + " " + apellido + " y tiene " + edad + " años");
@@ -20,12 +20,11 @@ edad = document.getElementById('txtIdEdad').value;
 function mostrar()
 {	
 let elNombre;
-elNombre = document.getElementById('txtIdNombre').value;
-
 let edad;
-edad = document.getElementById('txtIdEdad').value;
-
 let apellido;
+
+elNombre = document.getElementById('txtIdNombre').value;
+edad = document.getElementById('txtIdEdad').value;
 apellido = prompt("Ingrese su apellido","aqui");
 
 	alert("Usted se llama " + elNombre + " " + apellido + " y tiene " + edad + " años");

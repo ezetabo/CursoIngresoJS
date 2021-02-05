@@ -12,6 +12,7 @@ function mostrarAumento()
 
 	sueldo = txtIdSueldo.value;
 	sueldo = parseInt(sueldo);
+	
 	aumento = sueldo * 10/100;
 	resultado = sueldo + aumento;
 

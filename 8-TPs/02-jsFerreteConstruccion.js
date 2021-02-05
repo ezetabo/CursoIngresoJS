@@ -8,20 +8,19 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 function Rectangulo () 
 {
 	let largo;
-	largo = txtIdLargo.value;
-	largo = parseFloat(largo);
-
 	let ancho;
+	let perimetro;
+	let alambre;
+
+	largo = txtIdLargo.value;
 	ancho = txtIdAncho.value;
+	largo = parseFloat(largo);	
 	ancho = parseFloat(ancho);
 
-	let perimetro;
-	perimetro = (largo+ancho)*2;
-
-	let alambre;
+	perimetro = (largo+ancho)*2;	
 	alambre = perimetro*3;
 
-	alert(alambre);
+	alert("necesita "+alambre+" metros de alambre");
 
 
 }
@@ -29,36 +28,34 @@ function Rectangulo ()
 function Circulo () 
 {
 	let radio;
+	let perimetro;
+	let alambre;
+
 	radio = txtIdRadio.value;
 	radio = parseFloat(radio);
 
-	let perimetro;
-	perimetro = (3.14*radio*2);
-
-	let alambre;
+	perimetro = (3.14*radio*2);	
 	alambre = perimetro*3;
 
-	alert(alambre);
+	alert("necesita "+alambre+" metros de alambre");
 
 }
 
 function Materiales () 
 {
 	let largo;
-	largo = txtIdLargo.value;
-	largo = parseFloat(largo);
-
 	let ancho;
+	let area;
+	let cemento;
+	let cal;
+
+	largo = txtIdLargo.value;
 	ancho = txtIdAncho.value;
+	largo = parseFloat(largo);	
 	ancho = parseFloat(ancho);
 
-	let area;
-	area = (largo*ancho);
-
-	let cemento;
-	cemento = area*2;
-
-	let cal;
+	area = (largo*ancho);	
+	cemento = area*2;	
 	cal = area*3;
 
    

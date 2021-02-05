@@ -7,23 +7,21 @@ C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 
 function Sumar () 
 {
-	let precio1;
-	precio1 = txtIdPrecioUno.value;
-	precio1 = parseFloat(precio1);
-
+let precio1;
 	let precio2;
-	precio2 = txtIdPrecioDos.value;
-	precio2 = parseFloat(precio2);
-
 	let precio3;
+	let promedio;
+
+	precio1 = txtIdPrecioUno.value;
+	precio2 = txtIdPrecioDos.value;
 	precio3 = txtIdPrecioTres.value;
+	precio1 = parseFloat(precio1);	
+	precio2 = parseFloat(precio2);	
 	precio3 = parseFloat(precio3);
 
-	let valor;
 	valor = (precio1+precio2+precio3);
-
 	
-	alert(valor);
+	alert("el valor es: "+valor);
 
 
 }
@@ -34,48 +32,43 @@ function Promedio ()
 
 {
 	let precio1;
-	precio1 = txtIdPrecioUno.value;
-	precio1 = parseFloat(precio1);
-
 	let precio2;
-	precio2 = txtIdPrecioDos.value;
-	precio2 = parseFloat(precio2);
-
 	let precio3;
-	precio3 = txtIdPrecioTres.value;
-	precio3 = parseFloat(precio3);
-	
 	let promedio;
+
+	precio1 = txtIdPrecioUno.value;
+	precio2 = txtIdPrecioDos.value;
+	precio3 = txtIdPrecioTres.value;
+	precio1 = parseFloat(precio1);	
+	precio2 = parseFloat(precio2);	
+	precio3 = parseFloat(precio3);	
+	
 	promedio = (precio1+precio2+precio3)/3;
 
-	alert(promedio);
+	alert("el promedio es: "+promedio);
 }
 
 
 function PrecioFinal () 
 
 {
-	let precio1;
-	precio1 = txtIdPrecioUno.value;
-	precio1 = parseFloat(precio1);
-
+	let precio1;	
 	let precio2;
-	precio2 = txtIdPrecioDos.value;
-	precio2 = parseFloat(precio2);
-
 	let precio3;
-	precio3 = txtIdPrecioTres.value;
-	precio3 = parseFloat(precio3);
-
 	let valor;
-	valor = (precio1+precio2+precio3);
-
 	let iva;
-	iva = valor * 21/100;
-
 	let precioFinal;
+
+	precio1 = txtIdPrecioUno.value;
+	precio2 = txtIdPrecioDos.value;
+	precio3 = txtIdPrecioTres.value;
+	precio1 = parseFloat(precio1);	
+	precio2 = parseFloat(precio2);	
+	precio3 = parseFloat(precio3);
+	
+	valor = (precio1+precio2+precio3);	
+	iva = valor * 21/100;
 	precioFinal = valor + iva;
 
-
-	alert(precioFinal);
+	alert("el preciofinal es: "+precioFinal);
 }

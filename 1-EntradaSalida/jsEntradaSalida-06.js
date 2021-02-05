@@ -8,19 +8,15 @@ mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
 	let numero1;
-	numero1 = txtIdNumeroUno.value;
-
 	let numero2;
-	numero2 = txtIdNumeroDos.value;
+	let resultado;
 
+	numero1 = txtIdNumeroUno.value;	
+	numero2 = txtIdNumeroDos.value;
 	numero1 = parseInt(numero1);
 	numero2 = parseInt(numero2);
-
-
-    let resultado;
+	   
 	resultado = ( numero1 + numero2 );
-	
-
 	
 	alert("la suma es " + resultado);
 }

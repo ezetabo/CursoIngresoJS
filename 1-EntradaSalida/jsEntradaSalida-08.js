@@ -7,15 +7,14 @@ ej.: "El resto es 0 ."*/
 function SacarResto()
 {
 	let dividendo;
-	dividendo = txtIdNumeroDividendo.value;
-
 	let divisor;
-	divisor = txtIdNumeroDivisor.value;
+	let resultado;
 
+	dividendo = txtIdNumeroDividendo.value;	
+	divisor = txtIdNumeroDivisor.value;
 	dividendo = parseInt(dividendo);
 	divisor = parseInt(divisor);
-
-    let resultado;
+    
 	resultado = ( dividendo % divisor );
 	
 	alert("el resto es " + resultado);

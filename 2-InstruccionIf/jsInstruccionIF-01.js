@@ -1,6 +1,12 @@
+//Ezequiel Taboada
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+let edad;
+edad = txtIdEdad.value;
 
-}//FIN DE LA FUNCIÓN
+if(edad==15);
+{
+console.log("niña bonita");
+}
+
+}
