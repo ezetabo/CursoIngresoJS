@@ -19,6 +19,7 @@ function Rectangulo ()
 
 	perimetro = (largo+ancho)*2;	
 	alambre = perimetro*3;
+	alambre = alambre.toFixed(2);
 
 	alert("necesita "+alambre+" metros de alambre");
 
@@ -34,8 +35,11 @@ function Circulo ()
 	radio = txtIdRadio.value;
 	radio = parseFloat(radio);
 
-	perimetro = (3.14*radio*2);	
+
+	perimetro = (Math.PI*radio*2);	
 	alambre = perimetro*3;
+	alambre = alambre.toFixed(2);
+
 
 	alert("necesita "+alambre+" metros de alambre");
 
@@ -57,8 +61,7 @@ function Materiales ()
 	area = (largo*ancho);	
 	cemento = area*2;	
 	cal = area*3;
-
-   
+	   
 	alert("nesecita " + cemento + " bolsas de cemento " + " y " + cal + " bolsas de cal");
 
 
