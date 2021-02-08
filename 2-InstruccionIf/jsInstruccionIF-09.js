@@ -1,6 +1,19 @@
+/*
+Al presionar el Botón, mostrar un número Random del 1 al 10 inclusive
+*/
+//Ezequiel Taboada 1°D
+
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");	
+	let numero;
+	let maximo;
+	let minimo;
 
-}//FIN DE LA FUNCIÓN
+	maximo = 10;
+	minimo = 1;
+
+	numero = Math.round(Math.random() * (maximo - minimo) + minimo);
+
+	alert(numero); 
+	
+}

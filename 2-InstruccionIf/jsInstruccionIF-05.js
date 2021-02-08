@@ -1,6 +1,15 @@
+//Ezequiel Taboada 1°D
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	let edad;
+	edad = txtIdEdad.value;
+	edad = parseInt(edad);
 
-}//FIN DE LA FUNCIÓN
+	if(edad<=13 || edad>=17)
+{		
+
+	alert("no es un adolescente");
+}
+
+}
+	
