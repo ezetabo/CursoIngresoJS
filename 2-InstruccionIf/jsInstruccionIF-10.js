@@ -11,6 +11,7 @@ function mostrar()
 	let nota;
 	let maximo;
 	let minimo;
+	let mensaje;
 
 	maximo = 10;
 	minimo = 1;
@@ -18,15 +19,21 @@ function mostrar()
 	nota = Math.round(Math.random() * (maximo - minimo) + minimo);
 
 	if(nota>8)
-	{	
-	alert("Su nota es un "+nota+", EXCELENTE");
-	}
-	else if(nota<4)
 	{
-	alert("Su nota es un "+nota+", Vamos, la proxima se puede");
+		mensaje="EXCELENTE";
 	}
 	else
 	{
-	alert("Su nota es un "+nota+", APROBÓ");
+		if(nota<4)
+		{
+			mensaje="Vamos, la proxima se puede";
+		}
+		else
+		{
+			mensaje="APROBÓ";
+		}
 	}
+
+alert("Su nota es un "+nota+", "+mensaje);
+
 }

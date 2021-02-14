@@ -1,9 +1,27 @@
+// Ezequiel Taboada 1°D
+
 function mostrar()
 {
-	//tomo el mes
-	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
+	let meses;
+	meses = txtIdMes.value;
 
+	switch (meses)
+	{
+		case "Enero":
+			alert("que comiences bien el año!!!");
+			break;
 
+		case "Marzo":
+			alert("a clases!!!");
+			break;
 
-}//FIN DE LA FUNCIÓN
+		case "Julio":
+			alert("se vienen las vacaciones!!!");
+			break;
+
+		case "Diciembre":
+			alert("Felices fiesta!!!");
+			break;
+	}
+	
+}

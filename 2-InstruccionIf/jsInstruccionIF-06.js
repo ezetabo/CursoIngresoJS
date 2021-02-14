@@ -5,19 +5,27 @@ o adolescente (entre 13 y 17 años) o niño (menor a 13 años).*/
 function mostrar()
 {
 	let edad;
+	let mensaje;
+	
 	edad = txtIdEdad.value;
 	edad = parseInt(edad);
 
-	if(edad<12)		
+	if(edad>17)		
 	{		
-	alert("es un niño");
-	}
-	else if(edad>12 && edad<18)
-	{	
-	alert("es un adolescente");
+	mensaje="es un adulto";
 	}
 	else
 	{
-	alert("es un adulto");
+		if(edad>12 && edad<18)
+		{
+			mensaje="es un adolescente";
+		}
+			else
+			{
+				mensaje="es un niño";
+			}
+
 	}
+
+	alert(mensaje);
 }

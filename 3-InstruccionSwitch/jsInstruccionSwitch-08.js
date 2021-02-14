@@ -1,6 +1,23 @@
+// Ezequiel Taboada
+
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+	let destino;
+	let mensaje;
 
-}//FIN DE LA FUNCIÓN
+	destino=txtIdDestino.value;
+
+	switch(destino)
+	{
+		case "Ushuaia":
+		case "Bariloche":
+			mensaje="Es un clima FRIO";
+			break;
+
+		default:
+			mensaje="Es un clima CALIDO";
+	}
+
+	alert(mensaje);
+
+}
