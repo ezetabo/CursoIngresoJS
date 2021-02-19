@@ -1,8 +1,18 @@
-/*
-al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
+// Ezequiel Taboada 1°D
+
 function mostrar()
 {
-	var claveIngresada;
-	claveIngresada = prompt("ingrese el número clave.");
+	let clave;
+	let claveCorrecta;
+
+	claveCorrecta="utn750";	
+	clave = prompt("Ingrese su Clave");  
+
+	while (clave != claveCorrecta ) 
+	{
+		clave=prompt("Clave Incorrecta","Ingrese su CLave");
+	}
+
+	alert("Clave Correcta, Bienvenido");
 	
-}//FIN DE LA FUNCIÓN
+}
