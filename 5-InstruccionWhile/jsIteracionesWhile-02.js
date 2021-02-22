@@ -1,13 +1,12 @@
 // Ezquiel Taboada 1°D
 function mostrar()
 {
-	let numero;
-	numero=10;
-	while (numero>0) 
-	{		
-		//alert(numero);
-		console.log(numero);
-		numero=numero-1;		
+	let i;
+	i=10;
+	while (i>0) 
+	{			
+		console.log(i);
+		i=i-1;		
 	}
 	
 }

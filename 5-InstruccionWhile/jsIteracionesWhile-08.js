@@ -1,7 +1,34 @@
 //Ezequiel Taboada 1°D
 function mostrar()
 {
-	let respuesta="si";
+	let numeros;
+	let positivos=0;
+	let negativos=1;
+	let seguir='s'
+	let flag=0;
+
+	do {
+		numeros=parseInt(prompt("Ingrese un numero"));
+		if (numeros >= 0 ) {			
+			positivos=positivos+numeros;			
+		} else {
+			flag=1;
+			negativos=negativos*numeros;			
+		}	
+		seguir=prompt("¿Quiere ingresar otro numero?")	
+	} while (seguir=='s');
+
+	txtIdSuma.value="la suma es: "+positivos;
+
+	if (flag==0) {
+		negativos=0;
+		txtIdProducto.value="El producto es: "+negativos;		
+	}
+	txtIdProducto.value="El producto es: "+negativos;
+	
+}
+
+/*let respuesta="si";
 	let acumuladorNegativos=1;
 	let acumuladorPositivos=0;
 	let numeroIngresado;
@@ -26,6 +53,4 @@ function mostrar()
 		acumuladorNegativos=0;
 	}
 	txtIdProducto.value=acumuladorNegativos;
-	txtIdSuma.value=acumuladorPositivos;
-
-}
+	txtIdSuma.value=acumuladorPositivos;*/

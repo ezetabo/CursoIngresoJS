@@ -31,10 +31,7 @@ function CalcularPrecio ()
 
  	switch(cantidadLamparas)
  	{
- 		case 1:
- 			descuento=0;
- 			break;
-
+ 		case 1:		
  		case 2:
  			descuento=0;
  			break;
@@ -99,4 +96,45 @@ function CalcularPrecio ()
  	}
 }
 
+/*
+positivo = cantidadLamparitas>5;
+ 	switch(positivo)
+ 	{
+ 		case true:
+ 		descuento = 50;
+ 		break;
+ 		case false:
+ 			switch(cantidadLamparitas)
+ 			{
+ 				case 5:
+ 					switch(marcaLamparita)//enteros o caracteres 'a'
+ 					{
+ 						case "ArgentinaLuz":
+ 							descuento = 40;
+ 						break;
+ 						default:
+ 							descuento = 30;
+ 						break;
+ 					}
+ 				break;
+		 		case 4:
+		 			switch(marcaLamparita)
+		 			{
+		 				case "ArgentinaLuz":
+		 				case "FelipeLamparas":
+		 					descuento = 25;
+		 				break;
+		 				default:
+		 					decuento = 20;
+		 				break;
+		 			}	
 
+		 		break;
+		 		case 3:
+		 			
+		 		break;
+		 		 		
+ 			}
+ 		break;
+ 	}
+*/

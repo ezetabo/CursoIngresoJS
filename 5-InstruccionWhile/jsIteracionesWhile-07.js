@@ -6,27 +6,27 @@ e informar la suma acumulada y el promedio.
 function mostrar()
 {
 	
-	let respuesta="si";
+	let respuesta='s';
 	let acumulador=0;
 	let numeroIngresado;
 	let promedio;
-	let contador=0;
+	let i=0;
 
 	do {
 		numeroIngresado=parseInt(prompt("ingrese un numero"));
 		
 		acumulador=acumulador+numeroIngresado;
-		contador=contador+1;
+		i=i+1;
 		respuesta = prompt("¿quiere ingresar otro numero?")
 
-	} while (respuesta== "si");
+	} while (respuesta== 's');
 
-	/*while (respuesta== "si"){
+	/*while (respuesta== 's'){
 		
 		numeroIngresado=parseInt(prompt("ingrese un numero"));
 		
 		acumulador=acumulador+numeroIngresado;
-		contador=contador+1;
+		i=i+1;
 		respuesta = prompt("¿quiere ingresar otro numero?")
 
 	} */

@@ -1,6 +1,7 @@
+//Taboada Ezequiel 1°D
 function mostrar()
 {
-	let acumulador=0;
+	let sumaNumeroIngresado=0;
 	let numeroIngresado;
 	let promedio;
 	let i=0;
@@ -9,14 +10,12 @@ function mostrar()
 		
 		numeroIngresado=parseInt(prompt("ingrese un numero"));
 
-		acumulador=acumulador+numeroIngresado;
+		sumaNumeroIngresado+=numeroIngresado;
 		i=i+1;
 
 	} 
+	promedio=sumaNumeroIngresado/i;
 
-	
-	promedio=acumulador/i;
-	
 	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=promedio
+	txtIdPromedio.value=promedio;
 }

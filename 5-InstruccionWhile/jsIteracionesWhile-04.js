@@ -1,19 +1,16 @@
-/*
-al presionar el botón 
-pedir un número entre 0 y 9 inclusive.*/
+//Ezequiel Taboada 1°D
 function mostrar()
 {
 	let numeroIngresado;
 	
-	numeroIngresado = prompt("ingrese un número entre 0 y 9");
-	numeroIngresado = parseInt(numeroIngresado);
+	numeroIngresado = parseInt(prompt("ingrese un número entre 0 y 9"));
 	
-	while (numeroIngresado) {
-		if (numeroIngresado>9 || numeroIngresado<0)
-		{
-			numeroIngresado = prompt("Numero Invalido!!!","ingrese un número entre 0 y 9");
-		}
-		break;
+	while (numeroIngresado>9 || numeroIngresado<0) {
+		
+		
+		numeroIngresado = prompt("Numero Invalido!!!","ingrese un número entre 0 y 9");
+		
+		
 	}
 	
 

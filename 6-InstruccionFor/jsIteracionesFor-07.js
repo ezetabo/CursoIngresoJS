@@ -1,7 +1,17 @@
 function mostrar()
 {
+	let numeroIngresado;
 
-	alert("ok");
+	numeroingresado=parseInt(prompt("Ingrese un numero"))
+	
+	for(let i=1;i<=numeroIngresado;i++){
+		if (numeroIngresado%i==0) {
+			
+			console.log(i)
+		}
+		
+	}
+	
+	//alert("hay "+pares+" numero pares");	
 
-
-}//FIN DE LA FUNCIÓN
+}

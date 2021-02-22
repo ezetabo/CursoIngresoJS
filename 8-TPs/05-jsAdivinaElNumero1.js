@@ -28,13 +28,14 @@ function verificar()
   let intentos=0; 
   let numeroSecreto=30;
   
+  numeroIngresado=parseInt(txtIdNumero.value);
 	do {
 
-    numeroIngresado=parseInt(txtIdNumero.value);
     intentos++;
     if (numeroIngresado>numeroSecreto) {
 
-      alert("se paso...");      
+      alert("se paso...");     
+      numeroIngresado=parseInt(txtIdNumero.value); 
 
     } 
       alert("le falta...");
