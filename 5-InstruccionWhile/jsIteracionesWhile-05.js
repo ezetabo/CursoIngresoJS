@@ -6,7 +6,8 @@ function mostrar()
 	let sexo;
 	
 	sexo=prompt("Ingrese su Sexo: ","'f' para femenino, 'm' para masculino.");  
-
+	sexo=sexo.toLowerCase();
+	
 	while (sexo!='f' && sexo!='m') 
 	{
 		sexo=prompt("Sexo incorrecto, Por favor ingrese su sexo: ","'f' para femenino, 'm' para masculino.");

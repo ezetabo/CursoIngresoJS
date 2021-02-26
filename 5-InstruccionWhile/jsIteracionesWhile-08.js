@@ -4,7 +4,7 @@ function mostrar()
 	let numeros;
 	let positivos=0;
 	let negativos=1;
-	let seguir='s'
+	let seguir=true;
 	let flag=0;
 
 	do {
@@ -15,8 +15,8 @@ function mostrar()
 			flag=1;
 			negativos=negativos*numeros;			
 		}	
-		seguir=prompt("¿Quiere ingresar otro numero?")	
-	} while (seguir=='s');
+		seguir=confirm("¿Quiere ingresar otro numero?");
+	} while (seguir==true);
 
 	txtIdSuma.value="la suma es: "+positivos;
 

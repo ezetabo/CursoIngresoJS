@@ -14,14 +14,15 @@ function ComenzarIngreso ()
 	let edad;
 	let sexo;
 	let estadoMatrimonial;
-	let mensaje;
+	let mensajeMatrimonial;
+	let mensajeCivil;
 	let sueldoBruto;
 	let legajo;
 	let nacionalidad;
 	
 	edad=parseInt(prompt("Ingrese la edad"));
-		while (edad>90 || edad<18) {
-			edad=parseInt(prompt("edad invalida!!!, reingrese la edad"));
+		while (isNaN(edad) || edad>90 || edad<18) {
+			edad=prompt("edad invalida!!!, reingrese la edad");
 		}
 			txtIdEdad.value=edad+" años";
 
@@ -36,56 +37,56 @@ function ComenzarIngreso ()
 			}
 
 	estadoMatrimonial=parseInt(prompt("Ingrese estado civil","1.Soltero 2.Casado 3.Divorciado 4.Viudo"));
-		while (estadoMatrimonial>4 || estadoMatrimonial<1) {					
-			estadoMatrimonial=parseInt(prompt("Estado civil Invalido!!!","1.Soltero 2.Casado 3.Divorciado 4.Viudo"));
+		while (isNaN(estadoMatrimonial) || estadoMatrimonial>4 || estadoMatrimonial<1) {					
+			estadoMatrimonial=prompt("Estado civil Invalido!!!","1.Soltero 2.Casado 3.Divorciado 4.Viudo");
 		}	
 		switch (estadoMatrimonial) {
 			case 1:
-				mensaje="Soltero";
+				mensajeMatrimonial="Soltero";
 				break;
 			case 2:
-				mensaje="Casado";
+				mensajeMatrimonial="Casado";
 				break;
 			case 3:
-				mensaje="Divorciado";
+				mensajeMatrimonial="Divorciado";
 				break;
 			case 4:
-				mensaje="Viudo";
+				mensajeMatrimonial="Viudo";
 				break;	
 			}	
 		
-			txtIdEstadoCivil.value=mensaje;
+			txtIdEstadoCivil.value=mensajeMatrimonial;
 	
 	sueldoBruto=parseInt(prompt("Ingrese el sueldo"));
-		while (sueldoBruto<8000) {
-			sueldoBruto=parseInt(prompt("Sueldo Incorrecto!!!!","Reingrese el sueldo"));			
+		while (isNaN(sueldoBruto) || sueldoBruto<8000) {
+			sueldoBruto=prompt("Sueldo Incorrecto!!!!","Reingrese el sueldo");			
 		}
 		txtIdSueldo.value="$"+sueldoBruto;
 
 	legajo=parseInt(prompt("Ingrese legajo"));
-		while (legajo>9999 || legajo<0) {
-			legajo=parseInt(prompt("legajo Incorrecto!!!","Reingrese el legajo"));					
+			while (isNaN(legajo) || legajo>9999 || legajo<0) {
+			legajo=prompt("legajo Incorrecto!!!","Reingrese el legajo");					
 		}
 		txtIdLegajo.value="N° "+legajo;
 
 		nacionalidad=prompt("Ingrese la nacionalidad","a.Argentino e.Extranjero n.Nacionalizado");		
 		while (nacionalidad) {
 			if (nacionalidad=='a') {
-				mensaje="Argentino";
+				mensajeCivil="Argentino";
 				break;
 			}
 			if (nacionalidad=='e') {
-				mensaje="Extranjero";
+				mensajeCivil="Extranjero";
 				break;
 			}
 			
 			if (nacionalidad=='n') {
-				mensaje="Nacionalizado";
+				mensajeCivil="Nacionalizado";
 				break;
 			}				
 			
 			nacionalidad=prompt("Nacionalidad Incorrecta, Reingrese la Nacionalidad","a.Argentino e.Extranjero n.Nacionalizado");
 		}
-		txtIdNacionalidad.value=mensaje;
+		txtIdNacionalidad.value=mensajeCivil;
 
 }

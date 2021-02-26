@@ -2,7 +2,7 @@
 function mostrar()
 {
 	let numeroIngresado;
-	let seguir='s';
+	let seguir=true;
 	let sumaNegativos=0;
 	let sumaPositivos=0;
 	let negativos=0;
@@ -32,8 +32,8 @@ function mostrar()
 			pares++;
 		}
 
-		seguir=prompt("¿Quiere ingresar otro numero?");
-	} while (seguir=='s');
+		seguir=confirm("¿Quiere ingresar otro numero?");
+	} while (seguir==true);
 
 	diferencia=sumaPositivos+sumaNegativos;
 

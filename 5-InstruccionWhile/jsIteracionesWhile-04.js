@@ -5,7 +5,7 @@ function mostrar()
 	
 	numeroIngresado = parseInt(prompt("ingrese un número entre 0 y 9"));
 	
-	while (numeroIngresado>9 || numeroIngresado<0) {
+	while (isNaN(numeroIngresado) || (numeroIngresado>9 || numeroIngresado<0)) {
 		
 		
 		numeroIngresado = prompt("Numero Invalido!!!","ingrese un número entre 0 y 9");

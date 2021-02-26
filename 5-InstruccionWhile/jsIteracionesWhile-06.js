@@ -11,11 +11,11 @@ function mostrar()
 		numeroIngresado=parseInt(prompt("ingrese un numero"));
 
 		sumaNumeroIngresado+=numeroIngresado;
-		i=i+1;
+		i++;
 
 	} 
 	promedio=sumaNumeroIngresado/i;
 
-	txtIdSuma.value=acumulador;
+	txtIdSuma.value=sumaNumeroIngresado;
 	txtIdPromedio.value=promedio;
 }

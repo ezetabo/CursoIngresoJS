@@ -6,34 +6,34 @@ e informar la suma acumulada y el promedio.
 function mostrar()
 {
 	
-	let respuesta='s';
-	let acumulador=0;
+	let respuesta=true;
+	let acumuladorNumerosIngresados=0;
 	let numeroIngresado;
 	let promedio;
-	let i=0;
+	let contadorDeIngresos=0;
 
 	do {
 		numeroIngresado=parseInt(prompt("ingrese un numero"));
 		
-		acumulador=acumulador+numeroIngresado;
-		i=i+1;
-		respuesta = prompt("¿quiere ingresar otro numero?")
+		acumuladorNumerosIngresados+=numeroIngresado;
+		contadorDeIngresos++;
+		respuesta = confirm("¿quiere ingresar otro numero?");
 
-	} while (respuesta== 's');
+	} while (respuesta== true);
 
 	/*while (respuesta== 's'){
 		
 		numeroIngresado=parseInt(prompt("ingrese un numero"));
 		
-		acumulador=acumulador+numeroIngresado;
-		i=i+1;
+		acumuladorNumerosIngresados+=numeroIngresado;
+		contadorDeIngresos++;
 		respuesta = prompt("¿quiere ingresar otro numero?")
 
 	} */
 
 	
-	promedio=acumulador/contador;
+	promedio=acumuladorNumerosIngresados/contadorDeIngresos;
 	
-	txtIdSuma.value=acumulador;
+	txtIdSuma.value=acumuladorNumerosIngresados;
 	txtIdPromedio.value=promedio
 }
