@@ -6,6 +6,7 @@ c) La cantidad de hombres que hay solteros o viudos.X
 d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperaturaX
 e) El promedio de edad entre los hombres solteros.X
 */
+// Taboada Ezequiel 1°D
 function mostrar()
 {
 	let nombre;
@@ -55,7 +56,7 @@ function mostrar()
 		}
 		if (estadoMatrimonial=='s'&& sexo=='m') {
 			edadSolteros+=edad;
-			solteros++
+			solteros++;
 		}
 
 		if (flag==0 || temperatura>tempereturaMayor) {
@@ -81,5 +82,6 @@ function mostrar()
 	console.log(nombreTemperatura+" con "+tempereturaMayor+"° es el pasajero con mas temperatura");
 	console.log("cantidad de pasajeros que son mayores de edad y estan viudos: "+mayoresViudos);
 	console.log("cantidad de hombres que hay solteros o viudos: "+hombresNocasados);
+	console.log("cantiad de personas de la tercera edad con mas de 38 de temperatura: "+ancianosTemperatura);
 	console.log("La edad promedio de los hombres solteros es de "+promedioEdadSolteros+" años");
 }

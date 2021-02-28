@@ -9,16 +9,16 @@ function mostrar()
 	let numerosDentroDelRango=0;
 	let sumaNumerosDentoDelRango=0;
 	let promedio=0;		
-	let seguir='s'
+	let seguir=true;
 
-	while (seguir=='s') {		
+	while (seguir==true) {		
 		numeroIngresado=parseInt((prompt("ingrese un numero")));
 		if (numeroIngresado>9 && numeroIngresado<21) {
 			sumaNumerosDentoDelRango+=numeroIngresado;
 			numerosDentroDelRango++;
 		} 
 		
-		seguir=prompt("¿Quiere ingresar otro numero?");
+		seguir=confirm("¿Quiere ingresar otro numero?");
 	}
 	if (numerosDentroDelRango!=0) {
 		
