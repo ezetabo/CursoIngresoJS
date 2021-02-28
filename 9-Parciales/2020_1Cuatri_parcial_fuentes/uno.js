@@ -72,7 +72,7 @@ function mostrar(){
 		i++;
 	}
 
-	if (cantAlco>cantJabones || cantAlco>cantBarbi) {
+	if (cantAlco>cantJabones && cantAlco>cantBarbi) {
 		mensajeProducto="hay mas cantidad de Alcohol";
 		promedio=cantAlco/alcohol;
 		
