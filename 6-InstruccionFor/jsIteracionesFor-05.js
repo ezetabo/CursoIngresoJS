@@ -1,6 +1,6 @@
 function mostrar()
 {
-	let repeticiones;
+	/*let repeticiones;
 	
 
 	repeticiones=parseInt(prompt("Ingrese un valor"));
@@ -8,5 +8,20 @@ function mostrar()
 	for(let parar=9;repeticiones!=parar;){
 		
 		repeticiones=parseInt(prompt("Ingrese un valor"));
+	}*/
+
+	let numero;
+
+	for( ; ; )
+	{
+		numero = parseInt(prompt("ingrese un numero"));
+		if (numero==9) {
+			break;
+		}
 	}
+
+
+
+
+
 }

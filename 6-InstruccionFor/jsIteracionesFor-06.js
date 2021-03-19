@@ -1,15 +1,20 @@
+/*al presionar el botón pedir un número. mostrar los numeros pares desde el 1 al número ingresado, 
+y mostrar la cantidad de numeros pares encontrados.*/
+//Taboada Ezequiel 1°D
 function mostrar()
 {
 	let numeroIngresado;
-	let pares=0;
+	let contadorpares;
+	let i;
+	contadorpares=0;
 
-	numero=parseInt(prompt("Ingrese un numero"))
+	numeroIngresado=parseInt(prompt("Ingrese un numero"));
 	
-	for(let i=2;i<=numeroIngresado;i=i+2){
-		pares=pares+1;
-		console.log(i)
+	for(i=2;i<=numeroIngresado;i+=2){
+		contadorpares++;
+		document.write(i+"<br>");
 	}
 	
-	alert("hay "+pares+" numero pares");
+	document.write("hay "+contadorpares+" numero pares");
 
 }

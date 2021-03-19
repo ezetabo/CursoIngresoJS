@@ -1,17 +1,24 @@
+/*Enunciado:
+al presionar el botón pedir un número. mostrar los numeros divisores desde el 1 al número ingresado, 
+y mostrar la cantidad de numeros divisores encontrados.
+*/
 function mostrar()
 {
 	let numeroIngresado;
+	let contadorDivisores;
+	let i;
+	contadorDivisores=0;
 
-	numeroingresado=parseInt(prompt("Ingrese un numero"))
+	numeroIngresado=parseInt(prompt("Ingrese un numero"));
 	
-	for(let i=1;i<=numeroIngresado;i++){
+	for(i=1;i<=numeroIngresado;i++){
 		if (numeroIngresado%i==0) {
-			
-			console.log(i)
+			contadorDivisores++;
+			document.write(i+"<br>");
 		}
 		
 	}
 	
-	//alert("hay "+pares+" numero pares");	
+	document.write("hay "+contadorDivisores+" divisores del numero "+numeroIngresado);
 
 }

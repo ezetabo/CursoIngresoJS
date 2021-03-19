@@ -9,7 +9,8 @@ a) Del más barato de los alcohol, la cantidad de unidades y el fabricante
 b) Del tipo con mas unidades, el promedio por compra
 c) Cuántas unidades de jabones hay en total*/
 
-function mostrar(){
+function mostrar()
+{
 	
 	let producto
 	let unidades;
@@ -20,18 +21,24 @@ function mostrar(){
 	let fabriAlcoBarato;
 	let promedio;
 	let mensajeProducto;
-	let unidAlcoBarato=0;
-	let cantJabones=0;
-	let cantAlco=0;
-	let cantBarbi=0;
-	let flagAlco=0;
-	let barbijo=0;
-	let jabon=0;
-	let alcohol=0;
-	let i=0;
-
-	while (i<5) {
-
+	let unidAlcoBarato;
+	let cantJabones;
+	let cantAlco;
+	let cantBarbi;	
+	let barbijo;
+	let jabon;
+	let alcohol;
+	let i;
+	
+	unidAlcoBarato=0;
+	cantJabones=0;
+	cantAlco=0;
+	cantBarbi=0;	
+	barbijo=0;
+	jabon=0;
+	alcohol=0;
+	
+	for (i=0;i<5;i++ ) {
 		producto=prompt("Ingrese el producto","'B-barbijo' 'J-jabon' 'A-alcohol'");
 		producto=producto.toLowerCase();
 		while (producto!='b' && producto!='j' && producto!='a') {
@@ -50,28 +57,32 @@ function mostrar(){
 		fabricante=prompt("Ingrese el fabricante");
 		marca=prompt("Ingrese la marca");
 
-		if (producto=='a') {
-			cantAlco+=unidades;  
-			alcohol++;      
-		  } else {if (producto=='j') {
-			cantJabones+=unidades; 
-			jabon++;       
-		  } else {
-			cantBarbi+=unidades;
-			barbijo++;
-		  }        
-		  }   
 
-		  if (flagAlco==0 || (producto=='a' && precio<alcoBarato)) {
-			alcoBarato=precio;
-			fabriAlcoBarato=fabricante;
-			unidAlcoBarato+=unidades;
-			flagAlco=1;
+		switch (producto) {
+			case "a":
+				cantAlco+=unidades;  
+				alcohol++;
+				if (alcohol==1 || precio<alcoBarato) {
+					alcoBarato=precio;
+					fabriAlcoBarato=fabricante;
+					unidAlcoBarato+=unidades; 
+				}     
+				break;
+
+			case "b":
+				cantBarbi+=unidades;
+				barbijo++;
+				
+				break;
+		
+			default:
+				cantJabones+=unidades; 
+				jabon++;      
+				break;
 		}
 
-		i++;
 	}
-
+	
 	if (cantAlco>cantJabones && cantAlco>cantBarbi) {
 		mensajeProducto="hay mas cantidad de Alcohol";
 		promedio=cantAlco/alcohol;
@@ -85,10 +96,19 @@ function mostrar(){
 		promedio=cantJabones/jabon;
 	  }    
 	  }
-
-	console.log("hay "+unidAlcoBarato+" unidades de alcohol mas barato y el fabricante es "+fabriAlcoBarato);
+	if (alcohol!=0) {
+		console.log("hay "+unidAlcoBarato+" unidades de alcohol mas barato y el fabricante es "+fabriAlcoBarato);
+		
+	} else {
+		console.log("no se ingresaron productos del tipo Alcohol");
+	}
 	console.log(mensajeProducto+" y el promedio por compra es "+promedio+" unidades");
-	console.log("En total hay "+cantJabones+" unidades de jabon");
+
+	if (jabon!=0) {
+		console.log("En total hay "+cantJabones+" unidades de jabon");		
+	} else {
+		console.log("no se ingresaron productos del tipo Jabon");	
+	}
 
 }
 

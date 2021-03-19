@@ -13,7 +13,7 @@ f) El tipo mas caro*/
 
 function mostrar()
 {
-    let seguir=true;
+    let seguir;
     let producto;
     let precio;
     let bolsas;
@@ -23,17 +23,27 @@ function mostrar()
     let precioMayor;
     let prodMasBolsas;
     let cantidadBolsas;
-    let cantidadArena=0;
-    let cantidadCal=0;
-    let cantidadCemento=0;
-    let descuento=0;
-    let precioCemento=0;
-    let precioCal=0;
-    let precioArena=0;
-    let costoArena;
     let costoCal;
+    let costoArena;
     let costoCemento;
-    let flagProd=0;
+    let cantidadArena;
+    let cantidadCal;
+    let cantidadCemento;
+    let descuento;
+    let precioCemento;
+    let precioCal;
+    let precioArena;
+    let flagProd;
+
+    cantidadArena=0;
+    cantidadCal=0;
+    cantidadCemento=0;
+    descuento=0;
+    precioCemento=0;
+    precioCal=0;
+    precioArena=0;
+    flagProd=0;
+    seguir=true;
 
 
     while (seguir==true) {
@@ -53,19 +63,22 @@ function mostrar()
         bolsas=parseInt(prompt("cantidad invalida!! Ingrese cantidad de bolsas"));       
       }
 
-      if (producto=="arena") {
-        cantidadArena+=bolsas; 
-        precioArena+=precio;  
+      switch (producto) {
+        case "arena":
+          cantidadArena+=bolsas; 
+          precioArena+=precio;  
+          break;
 
-      } else {if (producto=="cal") {
-        cantidadCal+=bolsas;
-        precioCal+=precio;    
-            
-      } else {
-        cantidadCemento+=bolsas;
-        precioCemento+=precio;
-      }        
-      }             
+        case "cal":
+          cantidadCal+=bolsas;
+          precioCal+=precio;   
+          break;
+      
+        default:
+          cantidadCemento+=bolsas;
+          precioCemento+=precio;
+          break;
+      }  
 
       if (flagProd==0 || precio>precioMayor) {
         precioMayor=precio;
